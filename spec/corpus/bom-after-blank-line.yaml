@@ -1,0 +1,6 @@
+#! A byte order mark that opens a document's content after a blank line following its '---'
+#! marker, not just when it sits glued directly onto the marker or the very start of input.
+#!---
+---
+
+﻿a: 1
