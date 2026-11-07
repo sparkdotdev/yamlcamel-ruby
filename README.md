@@ -8,7 +8,7 @@ Copyright 2026, Spark Software Development, LLC.
 
 Use `YAMLCamel.load` and `YAMLCamel.dump` for the usual configuration-file jobs. Mappings become hashes, sequences become arrays, and scalars use Ruby strings, numbers, booleans and `nil`; parsing does not instantiate application classes.
 
-The parser handles block and flow collections, quoted and block strings, anchors, aliases and explicit tags. `load_stream` reads a document stream, while `load_one` rejects input containing more than one document. Unknown tags are accepted as annotations without instantiating Ruby objects.
+The parser targets [YAML 1.2.2](https://yaml.org/spec/1.2.2/) and handles block and flow collections, quoted and block strings, directives, anchors, aliases, and explicit tags. The YAML Test Suite is part of the tests, with one documented directive case excluded. `load_stream` reads a document stream, while `load_one` rejects input containing more than one document. The parser and emitter have no third-party runtime dependencies, so you can embed them in a Ruby application without adding another gem or a native parser.
 
 Input and output limits let you put bounds on document size, nesting, node counts and alias use. Duplicate mapping keys are rejected by default, and callers can choose a different policy when reading data they control.
 
